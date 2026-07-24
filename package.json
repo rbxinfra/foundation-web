@@ -1,0 +1,58 @@
+{
+  "name": "foundation-web",
+  "private": true,
+  "author": "@roblox/creator-resources-foundation",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:clean": "pnpm -r build:clean",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "changeset": "changeset",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@jest/globals": "^30.4.1",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-inject": "^5.0.5",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@swc/core": "^1.15.43",
+    "@swc/jest": "^0.2.39",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "fast-glob": "^3.3.3",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "lint-staged": "^17.0.8",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.25.0",
+    "prettier": "^3.9.5",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "rollup": "^4.62.2",
+    "rollup-plugin-dts": "^6.4.1",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "typescript": "^6.0.0",
+    "vite": "^8.1.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node scripts/validate-commit-msg.js"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "oxlint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  }
+}
