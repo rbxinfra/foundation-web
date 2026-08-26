@@ -6,6 +6,8 @@ Roblox Foundation design tokens and utilities for Tailwind CSS.
 
 This package is part of a pnpm workspace.
 
+`@rbx/foundation-ui` builds on this package for React components. Applications using Foundation UI should configure this preset, import `@rbx/foundation-ui/style` once from the application's global entrypoint, and load this package's CSS before Tailwind's base layer. See [`@rbx/foundation-ui`](../foundation-ui) for the component API.
+
 ## Installation
 
 ```bash
@@ -21,16 +23,21 @@ pnpm add @rbx/foundation-tailwind tailwindcss
 Import the preset in `tailwind.config.ts`:
 
 ```ts
-import type { Config } from 'tailwindcss';
-import foundationPreset from '@rbx/foundation-tailwind/preset';
+import type { Config } from "tailwindcss";
+import foundationPreset from "@rbx/foundation-tailwind/preset";
 
 const config: Config = {
-  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./node_modules/@rbx/foundation-ui/dist/**/*.{js,jsx}",
+  ],
   presets: [foundationPreset],
 };
 
 export default config;
 ```
+
+When using `@rbx/foundation-ui`, include its distribution in `content` so Tailwind's JIT compiler emits the Foundation utility classes used internally by the components.
 
 The preset uses the system color scheme for dark mode (`darkMode: 'media'`) and does not enable Tailwind preflight. Add any project-specific presets or configuration alongside it as needed.
 
@@ -39,7 +46,7 @@ The preset uses the system color scheme for dark mode (`darkMode: 'media'`) and 
 Import the package CSS at the top of the application's stylesheet, before Tailwind's base layer:
 
 ```css
-@import '@rbx/foundation-tailwind/css';
+@import "@rbx/foundation-tailwind/css";
 
 @tailwind base;
 @tailwind components;
@@ -47,6 +54,13 @@ Import the package CSS at the top of the application's stylesheet, before Tailwi
 ```
 
 This provides the generated Foundation token variables, light and system-dark theme values, and the base styles required by icon utilities. Tailwind generates the semantic utility rules from the preset. The CSS follows `prefers-color-scheme` for color mode.
+
+When using `@rbx/foundation-ui`, import its standalone component stylesheet once from the application's global entrypoint, such as Next.js `pages/_app.tsx`:
+
+```tsx
+// Without this global import, components are missing elevation, stacking, and theme variables.
+import "@rbx/foundation-ui/style";
+```
 
 ### 3. Use semantic Foundation utilities
 
@@ -70,30 +84,30 @@ Foundation utilities intentionally use full property names such as `padding-medi
 
 ### Preset
 
-| Export | Description |
-| --- | --- |
+| Export                                           | Description                                                                                                |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | `default` from `@rbx/foundation-tailwind/preset` | Tailwind preset containing Foundation theme values, core-plugin configuration, and custom utility plugins. |
 
 ### CSS entrypoint
 
-| Import | Description |
-| --- | --- |
+| Import                         | Description                                                                                              |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------- |
 | `@rbx/foundation-tailwind/css` | Generated CSS containing token variables, light and system-dark color-mode values, and icon base styles. |
 
 ### Utility groups
 
-| Group | Examples | Description |
-| --- | --- | --- |
-| Colors | `content-default`, `bg-surface-100`, `border-emphasis` | Semantic foreground, background, and border colors. |
-| Responsive breakpoints | `small:`, `medium:`, `large:`, `xlarge:` | Breakpoints based on Foundation values: 361px, 601px, 1141px, and 1521px. |
-| Spacing | `gap-medium`, `padding-small`, `margin-large` | Foundation spacing values. `gap-x-*` and `gap-y-*` are also available. |
-| Size | `width-1000`, `height-600`, `max-width-full` | Foundation size values and intrinsic size values such as `auto`, `full`, `min`, `max`, and `fit`. |
-| Aspect ratio | `aspect-1-1`, `aspect-16-9`, `aspect-4-3` | Foundation aspect-ratio utilities. |
-| Borders | `stroke-standard`, `stroke-thin`, `radius-medium` | Border width/style and radius utilities. `stroke-*` can also be combined with a border color value. |
-| Text | `text-body-medium`, `text-heading-large`, `text-align-x-center` | Foundation typography, horizontal text alignment, and vertical alignment. |
-| Layout and overflow | `wrap`, `no-wrap`, `clip`, `scroll-x` | Custom flex-wrap and overflow utilities. |
-| Text truncation | `text-truncate-end`, `text-truncate-split`, `text-truncate-none` | Text overflow behavior utilities. |
-| Icons | `icon-regular-check`, `icon-filled-check` | Generated regular and filled Foundation icon utilities. |
+| Group                  | Examples                                                         | Description                                                                                         |
+| ---------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Colors                 | `content-default`, `bg-surface-100`, `border-emphasis`           | Semantic foreground, background, and border colors.                                                 |
+| Responsive breakpoints | `small:`, `medium:`, `large:`, `xlarge:`                         | Breakpoints based on Foundation values: 361px, 601px, 1141px, and 1521px.                           |
+| Spacing                | `gap-medium`, `padding-small`, `margin-large`                    | Foundation spacing values. `gap-x-*` and `gap-y-*` are also available.                              |
+| Size                   | `width-1000`, `height-600`, `max-width-full`                     | Foundation size values and intrinsic size values such as `auto`, `full`, `min`, `max`, and `fit`.   |
+| Aspect ratio           | `aspect-1-1`, `aspect-16-9`, `aspect-4-3`                        | Foundation aspect-ratio utilities.                                                                  |
+| Borders                | `stroke-standard`, `stroke-thin`, `radius-medium`                | Border width/style and radius utilities. `stroke-*` can also be combined with a border color value. |
+| Text                   | `text-body-medium`, `text-heading-large`, `text-align-x-center`  | Foundation typography, horizontal text alignment, and vertical alignment.                           |
+| Layout and overflow    | `wrap`, `no-wrap`, `clip`, `scroll-x`                            | Custom flex-wrap and overflow utilities.                                                            |
+| Text truncation        | `text-truncate-end`, `text-truncate-split`, `text-truncate-none` | Text overflow behavior utilities.                                                                   |
+| Icons                  | `icon-regular-check`, `icon-filled-check`                        | Generated regular and filled Foundation icon utilities.                                             |
 
 The preset does not provide Tailwind's preflight or unrelated core utilities disabled by the package configuration. Continue to enable or implement project-specific behavior in your own Tailwind configuration when required.
 
@@ -107,11 +121,14 @@ import type {
   TTailwindContentClass,
   TTailwindIconClass,
   TTailwindClass,
-} from '@rbx/foundation-tailwind/classes';
+} from "@rbx/foundation-tailwind/classes";
 
 export type BadgeClassName = TTailwindBgClass | TTailwindContentClass;
 
-export function renderIcon(name: TTailwindIconClass, className: TTailwindClass = '') {
+export function renderIcon(
+  name: TTailwindIconClass,
+  className: TTailwindClass = "",
+) {
   return `<span class="icon ${name} ${className}" aria-hidden="true"></span>`;
 }
 ```

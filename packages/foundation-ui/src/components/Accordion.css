@@ -1,0 +1,23 @@
+.foundation-web-accordion-content {
+  grid-template-rows: 0fr
+}
+
+.foundation-web-accordion-content[data-state=open] {
+  grid-template-rows: 1fr
+}
+
+.foundation-web-accordion-content[data-state=open][data-size=xsmall] .foundation-web-accordion-content-inner {
+  padding-bottom: var(--padding-small);
+  padding-top: var(--padding-xsmall)
+}
+
+.foundation-web-accordion-content[data-state=open][data-size=small] .foundation-web-accordion-content-inner {
+  padding-bottom: var(--padding-large);
+  padding-top: var(--padding-xsmall)
+}
+
+.foundation-web-accordion-content[data-state=open][data-size=large] .foundation-web-accordion-content-inner,
+.foundation-web-accordion-content[data-state=open][data-size=medium] .foundation-web-accordion-content-inner {
+  padding-bottom: var(--padding-xlarge);
+  padding-top: var(--padding-xsmall)
+}

@@ -6,10 +6,6 @@ export const BASE_COLORS = {
   "common-scrim": "var(--color-common-scrim)",
   "common-shadow": "var(--color-common-shadow)",
   "common-shimmer": "var(--color-common-shimmer)",
-  "content-default": "var(--color-content-default)",
-  "content-emphasis": "var(--color-content-emphasis)",
-  "content-link": "var(--color-content-link)",
-  "content-muted": "var(--color-content-muted)",
   "over-media-0": "var(--color-over-media-0)",
   "over-media-100": "var(--color-over-media-100)",
   "over-media-200": "var(--color-over-media-200)",
@@ -23,9 +19,6 @@ export const BASE_COLORS = {
   "state-hover": "var(--color-state-hover)",
   "state-idle": "var(--color-state-idle)",
   "state-press": "var(--color-state-press)",
-  "stroke-default": "var(--color-stroke-default)",
-  "stroke-emphasis": "var(--color-stroke-emphasis)",
-  "stroke-muted": "var(--color-stroke-muted)",
   "surface-0": "var(--color-surface-0)",
   "surface-100": "var(--color-surface-100)",
   "surface-200": "var(--color-surface-200)",
@@ -36,6 +29,38 @@ export const BASE_COLORS = {
   "system-neutral": "var(--color-system-neutral)",
   "system-success": "var(--color-system-success)",
   "system-warning": "var(--color-system-warning)",
+
+  // Inverse
+  "inverse-none": "var(--inverse-none)",
+  "inverse-common-backdrop": "var(--inverse-common-backdrop)",
+  "inverse-common-heavy-divider": "var(--inverse-common-heavy-divider)",
+  "inverse-common-navigation-bar": "var(--inverse-common-navigation-bar)",
+  "inverse-common-scrim": "var(--inverse-common-scrim)",
+  "inverse-common-shadow": "var(--inverse-common-shadow)",
+  "inverse-common-shimmer": "var(--inverse-common-shimmer)",
+  "inverse-over-media-0": "var(--inverse-over-media-0)",
+  "inverse-over-media-100": "var(--inverse-over-media-100)",
+  "inverse-over-media-200": "var(--inverse-over-media-200)",
+  "inverse-over-media-300": "var(--inverse-over-media-300)",
+  "inverse-selection-start": "var(--inverse-selection-start)",
+  "inverse-selection-end": "var(--inverse-selection-end)",
+  "inverse-shift-100": "var(--inverse-shift-100)",
+  "inverse-shift-200": "var(--inverse-shift-200)",
+  "inverse-shift-300": "var(--inverse-shift-300)",
+  "inverse-shift-400": "var(--inverse-shift-400)",
+  "inverse-state-hover": "var(--inverse-state-hover)",
+  "inverse-state-idle": "var(--inverse-state-idle)",
+  "inverse-state-press": "var(--inverse-state-press)",
+  "inverse-surface-0": "var(--inverse-surface-0)",
+  "inverse-surface-100": "var(--inverse-surface-100)",
+  "inverse-surface-200": "var(--inverse-surface-200)",
+  "inverse-surface-300": "var(--inverse-surface-300)",
+  "inverse-system-alert": "var(--inverse-system-alert)",
+  "inverse-system-contrast": "var(--inverse-system-contrast)",
+  "inverse-system-emphasis": "var(--inverse-system-emphasis)",
+  "inverse-system-neutral": "var(--inverse-system-neutral)",
+  "inverse-system-success": "var(--inverse-system-success)",
+  "inverse-system-warning": "var(--inverse-system-warning)",
 };
 
 export const BG_COLORS = {
@@ -50,10 +75,24 @@ export const BG_COLORS = {
   "action-sub-emphasis": "var(--color-action-sub-emphasis-background)",
   "action-subtle": "var(--color-action-subtle-background)",
   "action-utility": "var(--color-action-utility-background)",
+
+  // Inverse
+  "inverse-action-alert": "var(--inverse-action-alert-background)",
+  "inverse-action-emphasis": "var(--inverse-action-emphasis-background)",
+  "inverse-action-link": "var(--inverse-action-link-background)",
+  "inverse-action-over-media": "var(--inverse-action-over-media-background)",
+  "inverse-action-soft-emphasis": "var(--inverse-action-soft-emphasis-background)",
+  "inverse-action-standard": "var(--inverse-action-standard-background)",
+  "inverse-action-sub-emphasis": "var(--inverse-action-sub-emphasis-background)",
+  "inverse-action-subtle": "var(--inverse-action-subtle-background)",
+  "inverse-action-utility": "var(--inverse-action-utility-background)",
 };
 
 export const BORDER_COLORS = {
   ...BASE_COLORS,
+
+  // Remove none as stroke-none defined in STROKE
+  none: undefined as never,
 
   default: "var(--color-stroke-default)",
   emphasis: "var(--color-stroke-emphasis)",
@@ -67,11 +106,29 @@ export const BORDER_COLORS = {
   "action-sub-emphasis": "var(--color-action-sub-emphasis-border)",
   "action-subtle": "var(--color-action-subtle-border)",
   "action-utility": "var(--color-action-utility-border)",
+
+  // Inverse
+  "inverse-default": "var(--inverse-stroke-default)",
+  "inverse-emphasis": "var(--inverse-stroke-emphasis)",
+  "inverse-muted": "var(--inverse-stroke-muted)",
+  "inverse-action-alert": "var(--inverse-action-alert-border)",
+  "inverse-action-emphasis": "var(--inverse-action-emphasis-border)",
+  "inverse-action-link": "var(--inverse-action-link-border)",
+  "inverse-action-over-media": "var(--inverse-action-over-media-border)",
+  "inverse-action-soft-emphasis": "var(--inverse-action-soft-emphasis-border)",
+  "inverse-action-standard": "var(--inverse-action-standard-border)",
+  "inverse-action-sub-emphasis": "var(--inverse-action-sub-emphasis-border)",
+  "inverse-action-subtle": "var(--inverse-action-subtle-border)",
+  "inverse-action-utility": "var(--inverse-action-utility-border)",
 };
 
 export const CONTENT_COLORS = {
   ...BASE_COLORS,
 
+  "default": "var(--color-content-default)",
+  "emphasis": "var(--color-content-emphasis)",
+  "link": "var(--color-content-link)",
+  "muted": "var(--color-content-muted)",
   "action-alert": "var(--color-action-alert-foreground)",
   "action-emphasis": "var(--color-action-emphasis-foreground)",
   "action-link": "var(--color-action-link-foreground)",
@@ -81,6 +138,21 @@ export const CONTENT_COLORS = {
   "action-sub-emphasis": "var(--color-action-sub-emphasis-foreground)",
   "action-subtle": "var(--color-action-subtle-foreground)",
   "action-utility": "var(--color-action-utility-foreground)",
+
+  // Inverse
+  "inverse-default": "var(--inverse-color-content-default)",
+  "inverse-emphasis": "var(--inverse-color-content-emphasis)",
+  "inverse-link": "var(--inverse-color-content-link)",
+  "inverse-muted": "var(--inverse-color-content-muted)",
+  "inverse-action-alert": "var(--inverse-color-action-alert-foreground)",
+  "inverse-action-emphasis": "var(--inverse-color-action-emphasis-foreground)",
+  "inverse-action-link": "var(--inverse-color-action-link-foreground)",
+  "inverse-action-over-media": "var(--inverse-color-action-over-media-foreground)",
+  "inverse-action-soft-emphasis": "var(--inverse-color-action-soft-emphasis-foreground)",
+  "inverse-action-standard": "var(--inverse-color-action-standard-foreground)",
+  "inverse-action-sub-emphasis": "var(--inverse-color-action-sub-emphasis-foreground)",
+  "inverse-action-subtle": "var(--inverse-color-action-subtle-foreground)",
+  "inverse-action-utility": "var(--inverse-color-action-utility-foreground)",
 };
 
 export const BREAKPOINTS = {
