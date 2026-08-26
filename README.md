@@ -18,6 +18,22 @@ pnpm add @rbx/foundation-tailwind tailwindcss
 
 See [packages/foundation-tailwind/README.md](./packages/foundation-tailwind/README.md) for the full setup guide, feature list, and API reference.
 
+### @rbx/foundation-ui
+
+Roblox Foundation React UI framework.
+
+`@rbx/foundation-ui` is the React component library for web, built on Radix UI and styled with Foundation design tokens and the utilities from `@rbx/foundation-tailwind`.
+
+> **Notice:** This documentation came from a tree-shaken source and may not include all available components.
+
+#### Installation
+
+```bash
+pnpm add @rbx/foundation-ui @rbx/foundation-tailwind tailwindcss react
+```
+
+See [packages/foundation-ui/README.md](./packages/foundation-ui/README.md) for component usage, accessibility guidance, and package-specific conventions.
+
 ## Key Links
 
 - **Repo:** `github.rbx.com/Roblox/foundation-web`
@@ -51,15 +67,17 @@ pnpm changeset     # record a change for release notes/versioning
 ## Workspace structure
 
 - [packages/foundation-tailwind](./packages/foundation-tailwind) — Tailwind preset, generated CSS, typed class definitions, and build scripts.
+- [packages/foundation-ui](./packages/foundation-ui) — React component library built on Radix UI and Foundation design tokens.
 - [scripts](./scripts) — repository tooling and validation helpers.
 
 ## Development
 
-The repository uses pnpm workspaces. To work on the Tailwind package locally:
+The repository uses pnpm workspaces. To work on the packages locally:
 
 ```bash
 pnpm install
 pnpm --filter @rbx/foundation-tailwind build
+pnpm --filter @rbx/foundation-ui build
 ```
 
-The package's own README includes the package-specific build commands and usage examples.
+Each package README includes the package-specific build commands and usage examples.

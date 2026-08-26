@@ -1,0 +1,13 @@
+{
+  "extends": ["../../.oxlintrc.json"],
+  "rules": {
+    "typescript/no-explicit-any": "off",
+    "typescript/no-unsafe-assignment": "off",
+    "typescript/no-unsafe-member-access": "off",
+    "typescript/consistent-type-imports": "off",
+    "eqeqeq": "warn",
+    "no-unused-vars": "off",
+
+    "import/no-default-export": "off"
+  }
+}

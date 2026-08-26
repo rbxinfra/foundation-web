@@ -1,0 +1,9 @@
+@keyframes foundation-web-skeleton-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-15deg)
+  }
+
+  to {
+    transform: translateX(150%) skewX(-15deg)
+  }
+}
