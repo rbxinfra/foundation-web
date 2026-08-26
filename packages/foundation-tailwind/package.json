@@ -1,0 +1,50 @@
+{
+  "name": "@rbx/foundation-tailwind",
+  "version": "1.25.0",
+  "description": "Roblox Foundation Tailwind Preset",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "style": "dist/css/index.css",
+  "sideEffects": false,
+  "exports": {
+    "./preset": {
+      "types": "./dist/types/preset.d.ts",
+      "development": "./src/preset.ts",
+      "require": "./dist/cjs/preset.js",
+      "import": "./dist/esm/preset.js"
+    },
+    "./classes": {
+      "types": "./dist/types/classes.d.ts",
+      "development": "./src/classes.ts"
+    },
+    "./css": {
+      "default": "./dist/css/index.css"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "pnpm build:icons && pnpm build:typography && pnpm build:types && NODE_ENV=production pnpm build:js && pnpm build:css",
+    "build:dev": "pnpm build:types && pnpm build:js && pnpm build:css",
+    "build:js": "rollup -c rollup.config.js",
+    "build:css": "node scripts/build-css.mjs",
+    "build:icons": "node scripts/build-icons.mjs",
+    "build:typography": "node scripts/build-typography.mjs",
+    "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly --outDir dist/types",
+    "build:clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": false
+    }
+  },
+  "author": "@roblox/creator-resources-foundation",
+  "license": "UNLICENSED",
+  "private": false
+}
