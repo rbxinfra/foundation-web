@@ -1,0 +1,57 @@
+{
+  "Breakpoint": {
+    "XSmall": {
+      "$type": "number",
+      "$value": 360,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:7:2",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    },
+    "Small": {
+      "$type": "number",
+      "$value": 600,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:7:3",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    },
+    "Medium": {
+      "$type": "number",
+      "$value": 1140,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:7:4",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    },
+    "Large": {
+      "$type": "number",
+      "$value": 1520,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:7:5",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    },
+    "XLarge": {
+      "$type": "number",
+      "$value": 1920,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:7:6",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ]
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Mode 1"
+  }
+}
