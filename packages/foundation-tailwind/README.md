@@ -46,7 +46,7 @@ The preset uses the system color scheme for dark mode (`darkMode: 'media'`) and 
 Import the package CSS at the top of the application's stylesheet, before Tailwind's base layer:
 
 ```css
-@import "@rbx/foundation-tailwind/css";
+@import "@rbx/foundation-tailwind";
 
 @tailwind base;
 @tailwind components;
@@ -92,7 +92,7 @@ Foundation utilities intentionally use full property names such as `padding-medi
 
 | Import                         | Description                                                                                              |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| `@rbx/foundation-tailwind/css` | Generated CSS containing token variables, light and system-dark color-mode values, and icon base styles. |
+| `@rbx/foundation-tailwind` | Generated CSS containing token variables, light and system-dark color-mode values, and icon base styles. |
 
 ### Utility groups
 
