@@ -84,7 +84,7 @@ const sharedConfig = {
 };
 
 const sharedOutput = {
-  sourcemap: process.env.NODE_ENV === "production" ? "hidden" : true,
+  sourcemap: true,
   entryFileNames: "[name].js",
   chunkFileNames: "[name]-[hash].js",
 };
