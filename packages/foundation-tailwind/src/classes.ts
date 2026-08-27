@@ -13,6 +13,15 @@ import type {
 } from "./classes/height";
 import type { TTailwindIconClass } from "./classes/icons.generated";
 import type {
+  TTailwindMarginBottomClass,
+  TTailwindMarginClass,
+  TTailwindMarginLeftClass,
+  TTailwindMarginRightClass,
+  TTailwindMarginTopClass,
+  TTailwindMarginXClass,
+  TTailwindMarginYClass,
+} from "./classes/margin";
+import type {
   TTailwindPaddingBottomClass,
   TTailwindPaddingClass,
   TTailwindPaddingLeftClass,
@@ -38,6 +47,13 @@ export type TTailwindClass =
   | TTailwindMinHeightClass
   | TTailwindMaxHeightClass
   | TTailwindIconClass
+  | TTailwindMarginClass
+  | TTailwindMarginXClass
+  | TTailwindMarginYClass
+  | TTailwindMarginTopClass
+  | TTailwindMarginBottomClass
+  | TTailwindMarginLeftClass
+  | TTailwindMarginRightClass
   | TTailwindPaddingClass
   | TTailwindPaddingXClass
   | TTailwindPaddingYClass

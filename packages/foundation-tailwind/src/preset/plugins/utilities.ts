@@ -17,6 +17,36 @@ export const utilitiesPlugin = plugin(
     );
 
     matchUtilities(
+      { "margin-x": (value) => ({ marginLeft: value, marginRight: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
+      { "margin-y": (value) => ({ marginTop: value, marginBottom: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
+      { 'margin-top': (value) => ({ marginTop: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
+      { 'margin-bottom': (value) => ({ marginBottom: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
+      { 'margin-left': (value) => ({ marginLeft: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
+      { 'margin-right': (value) => ({ marginRight: value }) },
+      { values: theme("margin") },
+    );
+
+    matchUtilities(
       { padding: (value) => ({ padding: value }) },
       { values: theme("padding") },
     );

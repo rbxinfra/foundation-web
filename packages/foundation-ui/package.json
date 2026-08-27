@@ -9,11 +9,11 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "development": "./src/index.ts",
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.js"
     },
     "./style": {
+      "types": "./dist/types/style.d.ts",
       "default": "./dist/style.css"
     }
   },
