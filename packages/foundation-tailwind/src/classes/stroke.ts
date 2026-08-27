@@ -1,5 +1,3 @@
-import type { TTailwindContentValue } from "./content";
-
 export type TTailwindStrokePrefix = "stroke";
 
 export type TTailwindStrokeValue =

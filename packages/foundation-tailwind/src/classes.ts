@@ -34,7 +34,11 @@ import type { TTailwindRadiusClass } from "./classes/radius";
 import type { TTailwindSizeClass } from "./classes/size";
 import type { TTailwindStrokeClass } from "./classes/stroke";
 import type { TTailwindTextClass } from "./classes/typography.generated";
-import type { TTailwindWidthClass } from "./classes/width";
+import type {
+  TTailwindMaxWidthClass,
+  TTailwindMinWidthClass,
+  TTailwindWidthClass,
+} from "./classes/width";
 
 export type TTailwindClass =
   | TTailwindAspectClass
@@ -43,6 +47,9 @@ export type TTailwindClass =
   | TTailwindGapClass
   | TTailwindGapXClass
   | TTailwindGapYClass
+  | TTailwindWidthClass
+  | TTailwindMinWidthClass
+  | TTailwindMaxWidthClass
   | TTailwindHeightClass
   | TTailwindMinHeightClass
   | TTailwindMaxHeightClass
@@ -64,14 +71,14 @@ export type TTailwindClass =
   | TTailwindRadiusClass
   | TTailwindSizeClass
   | TTailwindStrokeClass
-  | TTailwindTextClass
-  | TTailwindWidthClass;
+  | TTailwindTextClass;
 
 // Re-export everything:
 export * from "./classes/aspect";
 export * from "./classes/bg";
 export * from "./classes/content";
 export * from "./classes/gap";
+export * from "./classes/width";
 export * from "./classes/height";
 export * from "./classes/icons.generated";
 export * from "./classes/padding";
@@ -79,4 +86,3 @@ export * from "./classes/radius";
 export * from "./classes/size";
 export * from "./classes/stroke";
 export * from "./classes/typography.generated";
-export * from "./classes/width";

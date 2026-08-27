@@ -1,4 +1,5 @@
 import plugin from "tailwindcss/plugin";
+import { TRANSITION } from "../constants/transition";
 
 /** All base utilities */
 export const utilitiesPlugin = plugin(
@@ -27,22 +28,22 @@ export const utilitiesPlugin = plugin(
     );
 
     matchUtilities(
-      { 'margin-top': (value) => ({ marginTop: value }) },
+      { "margin-top": (value) => ({ marginTop: value }) },
       { values: theme("margin") },
     );
 
     matchUtilities(
-      { 'margin-bottom': (value) => ({ marginBottom: value }) },
+      { "margin-bottom": (value) => ({ marginBottom: value }) },
       { values: theme("margin") },
     );
 
     matchUtilities(
-      { 'margin-left': (value) => ({ marginLeft: value }) },
+      { "margin-left": (value) => ({ marginLeft: value }) },
       { values: theme("margin") },
     );
 
     matchUtilities(
-      { 'margin-right': (value) => ({ marginRight: value }) },
+      { "margin-right": (value) => ({ marginRight: value }) },
       { values: theme("margin") },
     );
 
@@ -62,22 +63,22 @@ export const utilitiesPlugin = plugin(
     );
 
     matchUtilities(
-      { 'padding-top': (value) => ({ paddingTop: value }) },
+      { "padding-top": (value) => ({ paddingTop: value }) },
       { values: theme("padding") },
     );
 
     matchUtilities(
-      { 'padding-bottom': (value) => ({ paddingBottom: value }) },
+      { "padding-bottom": (value) => ({ paddingBottom: value }) },
       { values: theme("padding") },
     );
 
     matchUtilities(
-      { 'padding-left': (value) => ({ paddingLeft: value }) },
+      { "padding-left": (value) => ({ paddingLeft: value }) },
       { values: theme("padding") },
     );
 
     matchUtilities(
-      { 'padding-right': (value) => ({ paddingRight: value }) },
+      { "padding-right": (value) => ({ paddingRight: value }) },
       { values: theme("padding") },
     );
 
@@ -121,6 +122,11 @@ export const utilitiesPlugin = plugin(
       { "text-align-y": (value) => ({ verticalAlign: value }) },
       { values: theme("verticalAlign") },
     );
+
+    addUtilities({
+      ".text-wrap": { whiteSpace: "normal" },
+      ".text-no-wrap": { whiteSpace: "nowrap" },
+    });
 
     // wrap and no-wrap
     addUtilities({
@@ -181,6 +187,61 @@ export const utilitiesPlugin = plugin(
     matchUtilities(
       { radius: (value) => ({ borderRadius: value }) },
       { values: theme("borderRadius") },
+    );
+
+    // Flex grow
+    addUtilities({
+      ".grow": {
+        flex: "1 0 auto",
+      },
+      ".shrink": {
+        flex: "0 1 auto",
+      },
+      ".fill": {
+        flex: "1 1 auto",
+      },
+    });
+
+    matchUtilities(
+      { grow: (value) => ({ flexGrow: value }) },
+      { values: theme("flexGrow") },
+    );
+
+    // Ease
+    matchUtilities(
+      { ease: (value) => ({ transitionTimingFunction: value }) },
+      { values: theme("transitionTimingFunction") },
+    );
+
+    // Transition property
+
+    // Add .transition- prefix to each transition property
+    const transitionProperties = Object.fromEntries(
+      Object.entries(TRANSITION).map(([key, value]) => [
+        `.transition-${key}`,
+        value,
+      ]),
+    );
+
+    addUtilities(transitionProperties);
+
+    // Outline
+    matchUtilities(
+      {
+        outline: (value) => {
+          const { outline, outlineOffset } = value;
+          const outlineProps: { outline?: string; outlineOffset?: string } = {
+            outline,
+          };
+
+          if (outlineOffset) {
+            outlineProps.outlineOffset = outlineOffset;
+          }
+
+          return outlineProps;
+        },
+      },
+      { values: theme("outline") },
     );
   },
 );
