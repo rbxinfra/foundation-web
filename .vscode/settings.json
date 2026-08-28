@@ -23,5 +23,5 @@
 
   "jest.jestCommandLine": "pnpm test",
   "jest.runMode": "on-demand",
-  "oxc.enable.oxlint": false
+  "oxc.enable.oxlint": true
 }

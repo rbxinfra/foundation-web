@@ -1,0 +1,30 @@
+{
+  "name": "@rbx/foundation-ui-test-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:clean": "rm -rf .next out",
+    "start": "pnpm dlx serve@latest out",
+    "sync": "aws s3 sync ${APP_PATH:-out} s3://${S3_BUCKET} --delete --region us-east-1 && aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'",
+    "publish-site": "pnpm build:clean && pnpm build && pnpm sync"
+  },
+  "dependencies": {
+    "@rbx/foundation-tailwind": "workspace:*",
+    "@rbx/foundation-ui": "workspace:*",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.26",
+    "postcss-import": "^17.0.0",
+    "typescript": "^6"
+  }
+}
