@@ -3,11 +3,15 @@
 }
 
 .shadow-transient-high {
-  box-shadow: var(--size1) var(--size-50) var(--size-100) -.5px var(--alpha-color-shadow-subtle), var(--size-0) var(--size-250) var(--size-500) -.75px var(--alpha-color-shadow-subtle), var(--size-0) var(--size-400) var(--size-800) -1px var(--alpha-color-shadow-subtle), var(--size-0) var(--size-1200) var(--size-1400) -1.5px var(--alpha-color-shadow-subtle)
+  box-shadow: var(--size-0) var(--size-50) var(--size-100) -.5px var(--alpha-color-shadow-subtle),
+    var(--size-0) var(--size-250) var(--size-500) -.75px var(--alpha-color-shadow-subtle),
+    var(--size-0) var(--size-400) var(--size-800) -1px var(--alpha-color-shadow-subtle),
+    var(--size-0) var(--size-1200) var(--size-1400) -1.5px var(--alpha-color-shadow-subtle);
 }
 
 .shadow-transient-low {
-  box-shadow: var(--size-0) var(--size-50) var(--size-100) -.5px var(--alpha-color-shadow-subtle), var(--size-0) var(--size-250) var(--size-500) -.75px var(--alpha-color-shadow-subtle)
+  box-shadow: var(--size-0) var(--size-50) var(--size-100) -.5px var(--alpha-color-shadow-subtle),
+    var(--size-0) var(--size-250) var(--size-500) -.75px var(--alpha-color-shadow-subtle);
 }
 
 .foundation-web-portal-zindex {
@@ -15,18 +19,19 @@
 }
 
 .fui-future-shadow-affixed-low {
-  box-shadow: 0 0 var(--size-100) 0 var(--fui-future-alpha-color-shadow-subtle), 0 0 var(--size-500) 0 var(--fui-future-alpha-color-shadow-subtle)
+  box-shadow: 0 0 var(--size-100) 0 var(--fui-future-alpha-color-shadow-subtle),
+    0 0 var(--size-500) 0 var(--fui-future-alpha-color-shadow-subtle);
 }
 
 :root {
-  --light-mode-stroke-contrast-alpha: rgba(27, 37, 75, .5);
-  --dark-mode-stroke-contrast-alpha: rgba(208, 217, 251, .4);
+  --light-mode-stroke-contrast-alpha: #1b254b80;
+  --dark-mode-stroke-contrast-alpha: #d0d9fb66;
   --color-stroke-contrast-alpha: var(--light-mode-stroke-contrast-alpha);
-  --alpha-light-mode-shadow-subtle: rgba(0, 0, 0, .08);
-  --alpha-dark-mode-shadow-subtle: rgba(4, 4, 8, .25);
+  --alpha-light-mode-shadow-subtle: #00000014;
+  --alpha-dark-mode-shadow-subtle: #04040840;
   --alpha-color-shadow-subtle: var(--alpha-light-mode-shadow-subtle);
   --fui-future-alpha-color-shadow-subtle: var(--alpha-light-mode-shadow-subtle);
-  --fui-future-alpha-color-system-progress: var(--light-mode-system-contrast)
+  --fui-future-alpha-color-system-progress: var(--light-mode-system-contrast);
 }
 
 @media (prefers-color-scheme:dark) {
@@ -78,4 +83,13 @@
 
 .foundation-web-input.focus-within\:stroke-system-alert:focus-within {
   box-shadow: inset 0 0 0 1px var(--color-system-alert)
+}
+.foundation-web-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.foundation-web-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

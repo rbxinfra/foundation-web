@@ -1,59 +1,57 @@
 .foundation-web-collection-carousel-scroll {
-  -ms-overflow-style: none;
-  overflow-x: auto;
-  overflow-y: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto hidden;
 }
 
 .foundation-web-collection-carousel-scroll::-webkit-scrollbar {
-  display: none
+  display: none;
 }
 
-.foundation-web-collection-carousel[data-has-margin=true] .foundation-web-collection-carousel-scroll {
+.foundation-web-collection-carousel[data-has-margin="true"] .foundation-web-collection-carousel-scroll {
   padding-left: var(--padding-xlarge);
   padding-right: var(--padding-xlarge);
   scroll-padding-left: var(--padding-xlarge);
-  scroll-padding-right: var(--padding-xlarge)
+  scroll-padding-right: var(--padding-xlarge);
 }
 
-.foundation-web-collection-carousel[data-discrete-position=true] .foundation-web-collection-carousel-scroll {
-  scroll-snap-type: x mandatory
+.foundation-web-collection-carousel[data-discrete-position="true"] .foundation-web-collection-carousel-scroll {
+  scroll-snap-type: x mandatory;
 }
 
-.foundation-web-collection-carousel[data-discrete-position=true] .foundation-web-collection-carousel-item {
-  scroll-snap-align: start
+.foundation-web-collection-carousel[data-discrete-position="true"] .foundation-web-collection-carousel-item {
+  scroll-snap-align: start;
 }
 
 .foundation-web-collection-carousel-nav {
+  z-index: 1;
   opacity: 0;
   pointer-events: none;
+  transition: opacity var(--time-200) var(--ease-standard-out);
   top: 50%;
   transform: translateY(-50%);
-  transition: opacity var(--time-200) var(--ease-standard-out);
-  z-index: 1
 }
 
 .foundation-web-collection-carousel-nav-previous {
-  left: var(--padding-medium)
+  left: var(--padding-medium);
 }
 
 .foundation-web-collection-carousel-nav-next {
-  right: var(--padding-medium)
+  right: var(--padding-medium);
 }
 
-.foundation-web-collection-carousel:focus-within .foundation-web-collection-carousel-nav[data-visible=true],
-.foundation-web-collection-carousel:hover .foundation-web-collection-carousel-nav[data-visible=true] {
+.foundation-web-collection-carousel:hover .foundation-web-collection-carousel-nav[data-visible="true"], .foundation-web-collection-carousel:focus-within .foundation-web-collection-carousel-nav[data-visible="true"] {
   opacity: 1;
-  pointer-events: auto
+  pointer-events: auto;
 }
 
-.foundation-web-collection-carousel-nav[data-visible=false] {
-  visibility: hidden
+.foundation-web-collection-carousel-nav[data-visible="false"] {
+  visibility: hidden;
 }
 
-@media (pointer:coarse) {
+@media (pointer: coarse) {
   .foundation-web-collection-carousel-nav {
-    display: none
+    display: none;
   }
 }

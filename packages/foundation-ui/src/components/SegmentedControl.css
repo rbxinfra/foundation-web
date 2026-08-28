@@ -1,19 +1,18 @@
 .fw-segmented-control-indicator {
   pointer-events: none;
+  z-index: 0;
   transition: left .3s cubic-bezier(.2, 0, 0, 1), width .3s cubic-bezier(.2, 0, 0, 1), height .3s cubic-bezier(.2, 0, 0, 1), top .3s cubic-bezier(.2, 0, 0, 1), border-radius .3s cubic-bezier(.2, 0, 0, 1), opacity .1s linear;
-  z-index: 0
 }
 
-.fw-segmented-control button,
-.fw-segmented-control button>* {
-  z-index: 1
+.fw-segmented-control button, .fw-segmented-control button > * {
+  z-index: 1;
 }
 
 .fw-segmented-control button:not(:disabled):hover .content-default {
-  transition: color 50ms cubic-bezier(.2, 0, 0, 1)
+  transition: color 50ms cubic-bezier(.2, 0, 0, 1);
 }
 
 .fw-segmented-control button:not(:disabled):active .icon {
+  transition: transform .2s cubic-bezier(.2, 0, 0, 1);
   transform: scale(.975);
-  transition: transform .2s cubic-bezier(.2, 0, 0, 1)
 }

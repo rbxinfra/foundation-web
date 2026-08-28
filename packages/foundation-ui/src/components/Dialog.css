@@ -1,98 +1,95 @@
 .foundation-web-dialog-overlay {
-  bottom: 0;
-  display: grid;
-  left: 0;
-  overflow-y: auto;
   place-items: center;
+  display: grid;
   position: fixed;
-  right: 0;
-  top: 0
+  inset: 0;
+  overflow-y: auto;
 }
 
 .foundation-web-dialog-close-container {
-  right: var(--size-300);
   top: var(--size-300);
-  z-index: 1
+  right: var(--size-300);
+  z-index: 1;
 }
 
 .foundation-web-dialog-hero-media {
+  margin-left: calc(var(--stroke-standard) * -1);
+  margin-right: calc(var(--stroke-standard) * -1);
+  margin-top: calc(var(--stroke-standard) * -1);
   border-top-left-radius: var(--radius-large);
   border-top-right-radius: var(--radius-large);
-  margin-left: calc(var(--stroke-standard)*-1);
-  margin-right: calc(var(--stroke-standard)*-1);
-  margin-top: calc(var(--stroke-standard)*-1);
-  overflow: clip
+  overflow: clip;
 }
 
-.foundation-web-dialog-content[data-size=Small] {
-  max-width: calc(var(--size-100)*80);
-  min-width: calc(var(--size-100)*75)
+.foundation-web-dialog-content[data-size="Small"] {
+  min-width: calc(var(--size-100) * 75);
+  max-width: calc(var(--size-100) * 80);
 }
 
-.foundation-web-dialog-content[data-size=Medium] {
-  max-width: calc(var(--size-100)*120);
-  min-width: calc(var(--size-100)*75)
+.foundation-web-dialog-content[data-size="Medium"] {
+  min-width: calc(var(--size-100) * 75);
+  max-width: calc(var(--size-100) * 120);
 }
 
-.foundation-web-dialog-content[data-size=Large] {
-  max-width: calc(var(--size-100)*160);
-  min-width: calc(var(--size-100)*75)
+.foundation-web-dialog-content[data-size="Large"] {
+  min-width: calc(var(--size-100) * 75);
+  max-width: calc(var(--size-100) * 160);
 }
 
 @keyframes foundation-web-dialog-backdrop-fade-in {
-  0% {
-    opacity: 0
+  from {
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes foundation-web-dialog-backdrop-fade-out {
-  0% {
-    opacity: 1
+  from {
+    opacity: 1;
   }
 
   to {
-    opacity: 0
+    opacity: 0;
   }
 }
 
 @keyframes foundation-web-dialog-content-scale-in {
-  0% {
-    transform: scale(.975)
+  from {
+    transform: scale(.975);
   }
 
   to {
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
 @keyframes foundation-web-dialog-content-scale-out {
-  0% {
-    transform: scale(1)
+  from {
+    transform: scale(1);
   }
 
   to {
-    transform: scale(.975)
+    transform: scale(.975);
   }
 }
 
-@media (prefers-reduced-motion:no-preference) {
-  .foundation-web-dialog-overlay[data-state=open] {
-    animation: foundation-web-dialog-backdrop-fade-in var(--time-100) var(--ease-linear)
+@media (prefers-reduced-motion: no-preference) {
+  .foundation-web-dialog-overlay[data-state="open"] {
+    animation: foundation-web-dialog-backdrop-fade-in var(--time-100) var(--ease-linear);
   }
 
-  .foundation-web-dialog-overlay[data-state=closed] {
-    animation: foundation-web-dialog-backdrop-fade-out var(--time-100) var(--ease-linear)
+  .foundation-web-dialog-overlay[data-state="closed"] {
+    animation: foundation-web-dialog-backdrop-fade-out var(--time-100) var(--ease-linear);
   }
 
-  .foundation-web-dialog-content[data-state=open] {
-    animation: foundation-web-dialog-content-scale-in var(--time-300) var(--ease-standard-out)
+  .foundation-web-dialog-content[data-state="open"] {
+    animation: foundation-web-dialog-content-scale-in var(--time-300) var(--ease-standard-out);
   }
 
-  .foundation-web-dialog-content[data-state=closed] {
-    animation: foundation-web-dialog-content-scale-out var(--time-300) var(--ease-standard-out)
+  .foundation-web-dialog-content[data-state="closed"] {
+    animation: foundation-web-dialog-content-scale-out var(--time-300) var(--ease-standard-out);
   }
 }

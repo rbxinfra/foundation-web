@@ -1,3 +1,3 @@
-.data-\[state\=unchecked\]\:stroke-contrast-alpha[data-state=unchecked] {
-  border-color: var(--color-stroke-contrast-alpha)
+.data-\[state\=unchecked\]\:stroke-contrast-alpha[data-state="unchecked"] {
+  border-color: var(--color-stroke-contrast-alpha);
 }

@@ -1,13 +1,13 @@
 @keyframes rotation {
-  0% {
-    transform: rotate(0deg)
+  from {
+    transform: rotate(0);
   }
 
   to {
-    transform: rotate(359deg)
+    transform: rotate(359deg);
   }
 }
 
 .foundation-web-loading-spinner {
-  animation: rotation 1s linear infinite normal
+  animation: 1s linear infinite rotation;
 }
