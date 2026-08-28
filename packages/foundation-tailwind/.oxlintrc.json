@@ -9,5 +9,8 @@
     "no-unused-vars": "off",
 
     "import/no-default-export": "off"
-  }
+  },
+  "ignorePatterns": [
+    "**/*.generated.ts",
+  ]
 }

@@ -40,6 +40,9 @@ import type {
   TTailwindWidthClass,
 } from "./classes/width";
 
+/**
+ * A union of all Tailwind class types defined in this package
+ */
 export type TTailwindClass =
   | TTailwindAspectClass
   | TTailwindBgClass
@@ -74,15 +77,16 @@ export type TTailwindClass =
   | TTailwindTextClass;
 
 // Re-export everything:
-export * from "./classes/aspect";
-export * from "./classes/bg";
-export * from "./classes/content";
-export * from "./classes/gap";
-export * from "./classes/width";
-export * from "./classes/height";
-export * from "./classes/icons.generated";
-export * from "./classes/padding";
-export * from "./classes/radius";
-export * from "./classes/size";
-export * from "./classes/stroke";
-export * from "./classes/typography.generated";
+export type * from "./classes/aspect";
+export type * from "./classes/bg";
+export type * from "./classes/content";
+export type * from "./classes/gap";
+export type * from "./classes/width";
+export type * from "./classes/height";
+export type * from "./classes/icons.generated";
+export type * from "./classes/margin";
+export type * from "./classes/padding";
+export type * from "./classes/radius";
+export type * from "./classes/size";
+export type * from "./classes/stroke";
+export type * from "./classes/typography.generated";

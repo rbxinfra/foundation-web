@@ -1,5 +1,11 @@
+/**
+ * Prefix for Tailwind size classes
+ */
 export type TTailwindSizePrefix = "size";
 
+/**
+ * Tailwind sizes
+ */
 export type TTailwindSizes =
   | "0"
   | "50"
@@ -40,7 +46,13 @@ export type TTailwindSizes =
   | "2900"
   | "3000";
 
+/**
+ * Tailwind size values
+ */
 export type TTailwindSizeValue =
   TTailwindSizes | "auto" | "full" | "min" | "max" | "fit";
 
+/**
+ * Tailwind size class
+ */
 export type TTailwindSizeClass = `${TTailwindSizePrefix}-${TTailwindSizeValue}`;

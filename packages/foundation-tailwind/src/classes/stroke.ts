@@ -1,5 +1,11 @@
+/**
+ * Prefix for stroke classes in Tailwind CSS.
+ */
 export type TTailwindStrokePrefix = "stroke";
 
+/**
+ * Values for stroke classes in Tailwind CSS.
+ */
 export type TTailwindStrokeValue =
   | "none"
   | "common-backdrop"
@@ -98,5 +104,8 @@ export type TTailwindStrokeValue =
   | "thick"
   | "thicker";
 
+/**
+ * Represents a complete stroke class in Tailwind CSS, combining the prefix and value.
+ */
 export type TTailwindStrokeClass =
   `${TTailwindStrokePrefix}-${TTailwindStrokeValue}`;

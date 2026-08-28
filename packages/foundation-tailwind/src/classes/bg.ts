@@ -1,5 +1,11 @@
+/**
+ * The prefix for the Tailwind background classes.
+ */
 export type TTailwindBgPrefix = "bg";
 
+/**
+ * The possible values for the Tailwind background classes.
+ */
 export type TTailwindBgValue =
   | "none"
   | "common-backdrop"
@@ -80,4 +86,7 @@ export type TTailwindBgValue =
   | "inverse-action-subtle"
   | "inverse-action-utility";
 
+/**
+ * The complete Tailwind background class type, which combines the prefix and value.
+ */
 export type TTailwindBgClass = `${TTailwindBgPrefix}-${TTailwindBgValue}`;

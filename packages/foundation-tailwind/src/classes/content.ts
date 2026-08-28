@@ -1,5 +1,11 @@
+/**
+ * The prefix for the Tailwind content classes.
+ */
 export type TTailwindContentPrefix = "content";
 
+/**
+ * The possible values for the Tailwind content classes.
+ */
 export type TTailwindContentValue =
   | "none"
   | "common-backdrop"
@@ -95,5 +101,8 @@ export type TTailwindContentValue =
   | "inverse-action-subtle"
   | "inverse-action-utility";
 
+/**
+ * The complete Tailwind content class type, which combines the prefix and value.
+ */
 export type TTailwindContentClass =
   `${TTailwindContentPrefix}-${TTailwindContentValue}`;
