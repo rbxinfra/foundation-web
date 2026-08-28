@@ -1,4 +1,4 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
 /**
  * Creates height utilities for Tailwind CSS.
@@ -12,16 +12,16 @@ export const heightUtilities = ({
 }: TTailwindPluginAPI) => {
   matchUtilities(
     { height: (value) => ({ height: value }) },
-    { values: theme("height") },
+    { values: theme('height') },
   );
 
   matchUtilities(
-    { "min-height": (value) => ({ minHeight: value }) },
-    { values: theme("minHeight") },
+    { 'min-height': (value) => ({ minHeight: value }) },
+    { values: theme('minHeight') },
   );
 
   matchUtilities(
-    { "max-height": (value) => ({ maxHeight: value }) },
-    { values: theme("maxHeight") },
+    { 'max-height': (value) => ({ maxHeight: value }) },
+    { values: theme('maxHeight') },
   );
 };

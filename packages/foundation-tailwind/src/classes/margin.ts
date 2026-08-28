@@ -1,42 +1,42 @@
 /**
  * Prefixes for Tailwind margin classes
  */
-export type TTailwindMarginPrefix = "margin";
+export type TTailwindMarginPrefix = 'margin';
 
 /**
  * Prefixes for Tailwind margin-top classes
  */
-export type TTailwindMarginTopPrefix = "margin-top";
+export type TTailwindMarginTopPrefix = 'margin-top';
 
 /**
  * Prefixes for Tailwind margin-right classes
  */
-export type TTailwindMarginRightPrefix = "margin-right";
+export type TTailwindMarginRightPrefix = 'margin-right';
 
 /**
  * Prefixes for Tailwind margin-bottom classes
  */
-export type TTailwindMarginBottomPrefix = "margin-bottom";
+export type TTailwindMarginBottomPrefix = 'margin-bottom';
 
 /**
  * Prefixes for Tailwind margin-left classes
  */
-export type TTailwindMarginLeftPrefix = "margin-left";
+export type TTailwindMarginLeftPrefix = 'margin-left';
 
 /**
  * Prefixes for Tailwind margin-x classes
  */
-export type TTailwindMarginXPrefix = "margin-x";
+export type TTailwindMarginXPrefix = 'margin-x';
 
 /**
  * Prefixes for Tailwind margin-y classes
  */
-export type TTailwindMarginYPrefix = "margin-y";
+export type TTailwindMarginYPrefix = 'margin-y';
 
 /**
  * Tailwind margin values
  */
-export type TTailwindMarginValue = "none" | "small" | "medium" | "large";
+export type TTailwindMarginValue = 'none' | 'small' | 'medium' | 'large';
 
 /**
  * Tailwind margin classes

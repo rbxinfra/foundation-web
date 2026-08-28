@@ -1,9 +1,9 @@
-import { readFileSync } from "node:fs";
+import { readFileSync } from 'node:fs';
 
-import { buildThemeClassesCss } from "./build-theme-classes-css.mjs";
+import { buildThemeClassesCss } from './build-theme-classes-css.mjs';
 
 export function buildClassesCss() {
-  const baseClasses = readFileSync("./css/classes.css", "utf8");
+  const baseClasses = readFileSync('./css/classes.css', 'utf8');
   const {
     lightThemeClass,
     darkThemeClass,
@@ -19,5 +19,5 @@ export function buildClassesCss() {
     `@media (prefers-color-scheme: dark) {\n${systemDarkThemeClass}\n}`,
   ];
 
-  return css.join("\n");
+  return css.join('\n');
 }

@@ -1,4 +1,4 @@
-@import "@rbx/foundation-tailwind";
+@import '@rbx/foundation-tailwind';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

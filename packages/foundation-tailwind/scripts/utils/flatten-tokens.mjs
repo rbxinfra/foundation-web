@@ -1,14 +1,8 @@
-import {
-  resolve
-} from 'path';
-import {
-  readFileSync,
-  writeFileSync
-} from 'fs';
-
 function flattenTokens(tokens, sort = true) {
   function isTokenNode(node) {
-    return !!node && typeof node === 'object' && '$value' in node && '$type' in node;
+    return (
+      !!node && typeof node === 'object' && '$value' in node && '$type' in node
+    );
   }
 
   function colorObjToRgba(v) {
@@ -28,7 +22,8 @@ function flattenTokens(tokens, sort = true) {
   }
 
   function aliasRef(node) {
-    const targetName = node.$extensions &&
+    const targetName =
+      node.$extensions &&
       node.$extensions['com.figma.aliasData'] &&
       node.$extensions['com.figma.aliasData'].targetVariableName;
     if (typeof targetName === 'string' && targetName.length > 0) {
@@ -38,10 +33,7 @@ function flattenTokens(tokens, sort = true) {
   }
 
   function leafValue(node) {
-    const {
-      $type,
-      $value
-    } = node;
+    const { $type, $value } = node;
     const figmaType = node.$extensions && node.$extensions['com.figma.type'];
 
     const alias = aliasRef(node);
@@ -106,31 +98,9 @@ function flattenTokens(tokens, sort = true) {
     if (key.startsWith('$')) continue;
     result[key] = walk(tokens[key]);
   }
-  if (sort)
-    return sortKeysDeep(result);
+  if (sort) return sortKeysDeep(result);
 
   return result;
 }
 
-// ---- CLI entry point ----
-if (import.meta.main) {
-  const [, , inputArg, outputArg] = process.argv;
-  if (!inputArg) {
-    console.error('Usage: node flatten-tokens.js <input.json> [output.json]');
-    process.exit(1);
-  }
-
-  const inputPath = resolve(inputArg);
-  const outputPath = resolve(outputArg || inputArg.replace(/\.json$/, '.flattened.json'));
-
-  const raw = readFileSync(inputPath, 'utf8');
-  const tokens = JSON.parse(raw);
-  const flattened = flattenTokens(tokens);
-
-  writeFileSync(outputPath, JSON.stringify(flattened, null, 2));
-  console.log(`Flattened tokens written to ${outputPath}`);
-}
-
-export {
-  flattenTokens
-};
+export { flattenTokens };

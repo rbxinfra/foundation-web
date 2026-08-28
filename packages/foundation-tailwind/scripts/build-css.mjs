@@ -19,4 +19,5 @@ mkdirSync("./dist/css", {
   recursive: true,
 });
 writeFileSync("./dist/css/index.css", css);
+// oxlint-disable-next-line no-console
 console.log("dist/css/index.css written");

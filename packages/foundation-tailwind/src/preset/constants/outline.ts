@@ -5,10 +5,10 @@
  */
 export const OUTLINE = {
   none: {
-    outline: "var(--stroke-none) solid var(--color-none)",
+    outline: 'var(--stroke-none) solid var(--color-none)',
   },
   focus: {
-    outline: "var(--stroke-thicker) solid var(--color-selection-start)",
-    outlineOffset: "var(--stroke-thicker)",
+    outline: 'var(--stroke-thicker) solid var(--color-selection-start)',
+    outlineOffset: 'var(--stroke-thicker)',
   },
 };

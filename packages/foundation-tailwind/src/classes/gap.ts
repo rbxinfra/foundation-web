@@ -1,30 +1,30 @@
 /**
  * Prefixes for Tailwind gap classes
  */
-export type TTailwindGapPrefix = "gap";
+export type TTailwindGapPrefix = 'gap';
 
 /**
  * Prefixes for Tailwind gap-x classes
  */
-export type TTailwindGapXPrefix = "gap-x";
+export type TTailwindGapXPrefix = 'gap-x';
 
 /**
  * Prefixes for Tailwind gap-y classes
  */
-export type TTailwindGapYPrefix = "gap-y";
+export type TTailwindGapYPrefix = 'gap-y';
 
 /**
  * Tailwind gap values
  */
 export type TTailwindGapValue =
-  | "none"
-  | "xxsmall"
-  | "xsmall"
-  | "small"
-  | "medium"
-  | "large"
-  | "xlarge"
-  | "xxlarge";
+  | 'none'
+  | 'xxsmall'
+  | 'xsmall'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'xlarge'
+  | 'xxlarge';
 
 /**
  * Tailwind gap classes

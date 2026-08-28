@@ -1,4 +1,4 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
 /**
  * This plugin adds the following utilities to Tailwind:
@@ -12,12 +12,12 @@ export const textAlignUtilities = ({
   theme,
 }: TTailwindPluginAPI) => {
   matchUtilities(
-    { "text-align-x": (value) => ({ textAlign: value }) },
-    { values: theme("textAlign") },
+    { 'text-align-x': (value) => ({ textAlign: value }) },
+    { values: theme('textAlign') },
   );
 
   matchUtilities(
-    { "text-align-y": (value) => ({ verticalAlign: value }) },
-    { values: theme("verticalAlign") },
+    { 'text-align-y': (value) => ({ verticalAlign: value }) },
+    { values: theme('verticalAlign') },
   );
 };

@@ -1,25 +1,25 @@
-import type { Config as TTailwindConfig } from "tailwindcss";
+import type { Config as TTailwindConfig } from 'tailwindcss';
 
-import { SCREEN } from "./constants/screen";
+import { SCREEN } from './constants/screen';
 import {
   BACKGROUND_COLOR,
   FOREGROUND_COLOR,
   STROKE_COLOR,
-} from "./constants/color";
-import { RADIUS } from "./constants/radius";
-import { EASE } from "./constants/ease";
-import { GROW } from "./constants/grow";
-import { TEXT_ALIGN } from "./constants/text-align";
-import { ASPECT } from "./constants/aspect";
-import { DURATION } from "./constants/duration";
-import { GAP } from "./constants/gap";
-import { PADDING } from "./constants/padding";
-import { MARGIN } from "./constants/margin";
-import { SIZE } from "./constants/size";
-import { VERTICAL_ALIGN } from "./constants/vertical-align";
-import { STROKE } from "./constants/stroke";
+} from './constants/color';
+import { RADIUS } from './constants/radius';
+import { EASE } from './constants/ease';
+import { GROW } from './constants/grow';
+import { TEXT_ALIGN } from './constants/text-align';
+import { ASPECT } from './constants/aspect';
+import { DURATION } from './constants/duration';
+import { GAP } from './constants/gap';
+import { PADDING } from './constants/padding';
+import { MARGIN } from './constants/margin';
+import { SIZE } from './constants/size';
+import { VERTICAL_ALIGN } from './constants/vertical-align';
+import { STROKE } from './constants/stroke';
 
-type TTailwindCustomThemeConfig = TTailwindConfig["theme"];
+type TTailwindCustomThemeConfig = TTailwindConfig['theme'];
 
 export default {
   /* Override screen based on Builder */

@@ -1,16 +1,16 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
-import { STROKE } from "../../constants/stroke";
+import { STROKE } from '../../constants/stroke';
 
-const STROKE_CLASS_PREFIX = ".stroke";
+const STROKE_CLASS_PREFIX = '.stroke';
 
 /**
  * This plugin adds the following utilities to Tailwind:
  * - .stroke-${key} (border-width)
  * - .stroke-* (border-color)
- * 
+ *
  * Stroke takes the stroke constants from STROKE, and every other stroke utility is generated from the borderColor theme.
- * 
+ *
  * Example:
  * - .stroke-thin: { border-width: var(--stroke-thin); }
  * - .stroke-emphasis: { border-color: var(--color-stroke-emphasis); }
@@ -26,7 +26,7 @@ export const strokeUtilities = ({
       .map(([key, value]) => [`${STROKE_CLASS_PREFIX}-${key}`, value])
       .map(([key, value]) => [
         key,
-        { borderStyle: "solid", borderWidth: value, boxSizing: "border-box" },
+        { borderStyle: 'solid', borderWidth: value, boxSizing: 'border-box' },
       ]),
   );
 
@@ -35,6 +35,6 @@ export const strokeUtilities = ({
   matchUtilities(
     // per border color
     { stroke: (value) => ({ borderColor: value }) },
-    { values: theme("borderColor") },
+    { values: theme('borderColor') },
   );
 };

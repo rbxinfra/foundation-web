@@ -1,8 +1,8 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
 /**
  * Creates content utilities for Tailwind CSS.
- * 
+ *
  * This overrides the default text-* color utilities to use the `content` property instead of `color`.
  */
 export const contentUtilities = ({
@@ -11,6 +11,6 @@ export const contentUtilities = ({
 }: TTailwindPluginAPI) => {
   matchUtilities(
     { content: (value) => ({ color: value }) },
-    { values: theme("colors") },
+    { values: theme('colors') },
   );
 };

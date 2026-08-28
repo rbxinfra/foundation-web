@@ -1,6 +1,6 @@
-import { Config as TTailwindConfig } from "tailwindcss";
+import { Config as TTailwindConfig } from 'tailwindcss';
 
-type TTailwindCorePluginsConfig = TTailwindConfig["corePlugins"];
+type TTailwindCorePluginsConfig = TTailwindConfig['corePlugins'];
 
 /**
  * Tailwind core plugins configuration.

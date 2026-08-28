@@ -1,4 +1,4 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
 /**
  * Creates margin utilities for Tailwind CSS.
@@ -12,36 +12,36 @@ export const marginUtilities = ({
 }: TTailwindPluginAPI) => {
   matchUtilities(
     { margin: (value) => ({ margin: value }) },
-    { values: theme("margin") },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-x": (value) => ({ marginLeft: value, marginRight: value }) },
-    { values: theme("margin") },
+    { 'margin-x': (value) => ({ marginLeft: value, marginRight: value }) },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-y": (value) => ({ marginTop: value, marginBottom: value }) },
-    { values: theme("margin") },
+    { 'margin-y': (value) => ({ marginTop: value, marginBottom: value }) },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-top": (value) => ({ marginTop: value }) },
-    { values: theme("margin") },
+    { 'margin-top': (value) => ({ marginTop: value }) },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-bottom": (value) => ({ marginBottom: value }) },
-    { values: theme("margin") },
+    { 'margin-bottom': (value) => ({ marginBottom: value }) },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-left": (value) => ({ marginLeft: value }) },
-    { values: theme("margin") },
+    { 'margin-left': (value) => ({ marginLeft: value }) },
+    { values: theme('margin') },
   );
 
   matchUtilities(
-    { "margin-right": (value) => ({ marginRight: value }) },
-    { values: theme("margin") },
+    { 'margin-right': (value) => ({ marginRight: value }) },
+    { values: theme('margin') },
   );
 };

@@ -1,8 +1,8 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
-import { TRANSITION } from "../../constants/transition";
+import { TRANSITION } from '../../constants/transition';
 
-const TRANSISITION_CLASS_PREFIX = ".transition";
+const TRANSISITION_CLASS_PREFIX = '.transition';
 
 /**
  * This plugin adds the following utilities to Tailwind:

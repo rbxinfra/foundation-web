@@ -1,37 +1,37 @@
-import type { TTailwindSizes } from "./size";
+import type { TTailwindSizes } from './size';
 
 /**
  * Prefixes for Tailwind height classes.
  */
-export type TTailwindHeightPrefix = "height";
+export type TTailwindHeightPrefix = 'height';
 
 /**
  * Prefixes for Tailwind min-height classes.
  */
-export type TTailwindMinHeightPrefix = "min-height";
+export type TTailwindMinHeightPrefix = 'min-height';
 
 /**
  * Prefixes for Tailwind max-height classes.
  */
-export type TTailwindMaxHeightPrefix = "max-height";
+export type TTailwindMaxHeightPrefix = 'max-height';
 
 /**
  * Values for Tailwind height classes.
  */
 export type TTailwindHeightValue =
-  TTailwindSizes | "auto" | "full" | "min" | "max" | "fit";
+  TTailwindSizes | 'auto' | 'full' | 'min' | 'max' | 'fit';
 
 /**
  * Values for Tailwind min-height classes.
  */
 export type TTailwindMinHeightValue =
-  TTailwindSizes | "full" | "min" | "max" | "fit";
+  TTailwindSizes | 'full' | 'min' | 'max' | 'fit';
 
 /**
  * Values for Tailwind max-height classes.
  */
 export type TTailwindMaxHeightValue =
-  TTailwindSizes | "none" | "full" | "min" | "max" | "fit";
+  TTailwindSizes | 'none' | 'full' | 'min' | 'max' | 'fit';
 
 /**
  * Tailwind height class types.

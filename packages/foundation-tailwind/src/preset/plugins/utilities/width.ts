@@ -1,4 +1,4 @@
-import type { TTailwindPluginAPI } from "./types";
+import type { TTailwindPluginAPI } from './types';
 
 /**
  * Creates width utilities for Tailwind CSS.
@@ -12,16 +12,16 @@ export const widthUtilities = ({
 }: TTailwindPluginAPI) => {
   matchUtilities(
     { width: (value) => ({ width: value }) },
-    { values: theme("width") },
+    { values: theme('width') },
   );
 
   matchUtilities(
-    { "min-width": (value) => ({ minWidth: value }) },
-    { values: theme("minWidth") },
+    { 'min-width': (value) => ({ minWidth: value }) },
+    { values: theme('minWidth') },
   );
 
   matchUtilities(
-    { "max-width": (value) => ({ maxWidth: value }) },
-    { values: theme("maxWidth") },
+    { 'max-width': (value) => ({ maxWidth: value }) },
+    { values: theme('maxWidth') },
   );
 };

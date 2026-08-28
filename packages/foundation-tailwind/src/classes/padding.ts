@@ -1,50 +1,50 @@
 /**
  * Prefixes for Tailwind padding classes
  */
-export type TTailwindPaddingPrefix = "padding";
+export type TTailwindPaddingPrefix = 'padding';
 
 /**
  * Prefixes for Tailwind padding-x classes
  */
-export type TTailwindPaddingXPrefix = "padding-x";
+export type TTailwindPaddingXPrefix = 'padding-x';
 
 /**
  * Prefixes for Tailwind padding-y classes
  */
-export type TTailwindPaddingYPrefix = "padding-y";
+export type TTailwindPaddingYPrefix = 'padding-y';
 
 /**
  * Prefixes for Tailwind padding-top classes
  */
-export type TTailwindPaddingTopPrefix = "padding-top";
+export type TTailwindPaddingTopPrefix = 'padding-top';
 
 /**
  * Prefixes for Tailwind padding-bottom classes
  */
-export type TTailwindPaddingBottomPrefix = "padding-bottom";
+export type TTailwindPaddingBottomPrefix = 'padding-bottom';
 
 /**
  * Prefixes for Tailwind padding-left classes
  */
-export type TTailwindPaddingLeftPrefix = "padding-left";
+export type TTailwindPaddingLeftPrefix = 'padding-left';
 
 /**
  * Prefixes for Tailwind padding-right classes
  */
-export type TTailwindPaddingRightPrefix = "padding-right";
+export type TTailwindPaddingRightPrefix = 'padding-right';
 
 /**
  * Tailwind padding values
  */
 export type TTailwindPaddingValue =
-  | "none"
-  | "xxsmall"
-  | "xsmall"
-  | "small"
-  | "medium"
-  | "large"
-  | "xlarge"
-  | "xxlarge";
+  | 'none'
+  | 'xxsmall'
+  | 'xsmall'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'xlarge'
+  | 'xxlarge';
 
 /**
  * Tailwind padding classes

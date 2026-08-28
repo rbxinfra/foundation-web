@@ -1,13 +1,13 @@
-import { flattenTokens } from "./flatten-tokens.mjs";
+import { flattenTokens } from './flatten-tokens.mjs';
 import {
   flatten,
   tokenPathToCssVarName,
   aliasesToVarNames,
-} from "./token-utils.mjs";
+} from './token-utils.mjs';
 
-import defaultTokensSource from "../../tokens/Default.tokens.json" with { type: "json" };
-import typographyTokensSource from "../../tokens/Typography.tokens.json" with { type: "json" };
-import breakpointsTokensSource from "../../tokens/Breakpoints.tokens.json" with { type: "json" };
+import defaultTokensSource from '../../tokens/Default.tokens.json' with { type: 'json' };
+import typographyTokensSource from '../../tokens/Typography.tokens.json' with { type: 'json' };
+import breakpointsTokensSource from '../../tokens/Breakpoints.tokens.json' with { type: 'json' };
 
 const FONT_WEIGHT_VALUES = {
   Light: 300,
@@ -64,5 +64,5 @@ export function buildTokensCssVars() {
     ),
   );
 
-  return rootLines.join("\n") + "\n";
+  return rootLines.join('\n') + '\n';
 }

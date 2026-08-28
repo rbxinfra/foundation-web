@@ -1,12 +1,12 @@
-import { OUTLINE } from "../../constants/outline";
-import type { TTailwindPluginAPI } from "./types";
+import { OUTLINE } from '../../constants/outline';
+import type { TTailwindPluginAPI } from './types';
 
-const OUTLINE_CLASS_PREFIX = ".outline";
+const OUTLINE_CLASS_PREFIX = '.outline';
 
 /**
  * This plugin adds the following utilities to Tailwind:
  * - .outline-* (outline)
- * 
+ *
  * Overrides the default Tailwind outline utilities to use our custom outline values.
  */
 export const outlineUtilities = ({ addUtilities }: TTailwindPluginAPI) => {
