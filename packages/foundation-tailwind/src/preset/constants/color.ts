@@ -90,22 +90,22 @@ const NORMAL_FOREGROUND_COLOR = {
 } as const;
 
 const INVERSE_FOREGROUND_COLOR = {
-  'inverse-default': 'var(--inverse-color-content-default)',
-  'inverse-emphasis': 'var(--inverse-color-content-emphasis)',
-  'inverse-link': 'var(--inverse-color-content-link)',
-  'inverse-muted': 'var(--inverse-color-content-muted)',
-  'inverse-action-alert': 'var(--inverse-color-action-alert-foreground)',
-  'inverse-action-emphasis': 'var(--inverse-color-action-emphasis-foreground)',
-  'inverse-action-link': 'var(--inverse-color-action-link-foreground)',
+  'inverse-default': 'var(--inverse-content-default)',
+  'inverse-emphasis': 'var(--inverse-content-emphasis)',
+  'inverse-link': 'var(--inverse-content-link)',
+  'inverse-muted': 'var(--inverse-content-muted)',
+  'inverse-action-alert': 'var(--inverse-action-alert-foreground)',
+  'inverse-action-emphasis': 'var(--inverse-action-emphasis-foreground)',
+  'inverse-action-link': 'var(--inverse-action-link-foreground)',
   'inverse-action-over-media':
-    'var(--inverse-color-action-over-media-foreground)',
+    'var(--inverse-action-over-media-foreground)',
   'inverse-action-soft-emphasis':
-    'var(--inverse-color-action-soft-emphasis-foreground)',
-  'inverse-action-standard': 'var(--inverse-color-action-standard-foreground)',
+    'var(--inverse-action-soft-emphasis-foreground)',
+  'inverse-action-standard': 'var(--inverse-action-standard-foreground)',
   'inverse-action-sub-emphasis':
-    'var(--inverse-color-action-sub-emphasis-foreground)',
-  'inverse-action-subtle': 'var(--inverse-color-action-subtle-foreground)',
-  'inverse-action-utility': 'var(--inverse-color-action-utility-foreground)',
+    'var(--inverse-action-sub-emphasis-foreground)',
+  'inverse-action-subtle': 'var(--inverse-action-subtle-foreground)',
+  'inverse-action-utility': 'var(--inverse-action-utility-foreground)',
 } as const;
 
 /**

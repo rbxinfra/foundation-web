@@ -50,6 +50,7 @@ export default {
     padding: PADDING,
     margin: MARGIN,
 
+    size: SIZE,
     width: SIZE,
     height: SIZE,
     minWidth: SIZE,

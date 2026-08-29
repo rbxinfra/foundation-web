@@ -18,6 +18,9 @@
     "./classes": {
       "types": "./dist/types/classes.d.ts",
       "development": "./src/classes.ts"
+    },
+    "./css": {
+      "default": "./dist/css/index.css"
     }
   },
   "files": [
