@@ -4,6 +4,7 @@
  * Overrides flexGrow values to match the Builder's design system.
  */
 export const GROW = {
+  0: '0',
   1: '1',
   2: '2',
   3: '3',
