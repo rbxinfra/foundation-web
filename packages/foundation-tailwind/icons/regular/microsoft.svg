@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-<g transform="translate(0,2048) scale(1,-1)">
-<path d="M965 -192H192V581H965ZM1856 -192H1083V581H1856ZM965 699H192V1472H965ZM1856 699H1083V1472H1856Z" fill="currentColor"/>
-</g>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'><path d='M15.078125 29.0H3.0V16.921875H15.078125ZM29.0 29.0H16.921875V16.921875H29.0ZM15.078125 15.078125H3.0V3.0H15.078125ZM29.0 15.078125H16.921875V3.0H29.0Z' fill='black'/></svg>
