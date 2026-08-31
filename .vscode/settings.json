@@ -3,8 +3,8 @@
   "explorer.fileNesting.patterns": {
     "*.js": "${capture}.test.js, ${capture}.spec.js",
     "*.ts": "${capture}.test.ts, ${capture}.spec.ts",
-    "*.jsx": "${capture}.test.jsx, ${capture}.spec.jsx, ${capture}.css",
-    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx, ${capture}.css",
+    "*.jsx": "${capture}.test.jsx, ${capture}.spec.jsx, ${capture}.story.jsx, ${capture}.stories.jsx, ${capture}.css",
+    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx, ${capture}.story.tsx, ${capture}.stories.tsx, ${capture}.css",
     "*.css": "${capture}.module.css",
     "*.scss": "${capture}.module.scss",
     "*.html": "${capture}.test.html, ${capture}.spec.html",

@@ -1,0 +1,50 @@
+@import './webfont.css';
+@import '@rbx/foundation-tailwind/css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#storybook-root,
+#storybook-docs,
+.docs-story,
+.sb-story,
+.storybook-theme-root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html.light-theme,
+html.light-theme body,
+html.light-theme #storybook-root,
+html.light-theme #storybook-docs,
+html.light-theme .docs-story,
+html.light-theme .sb-story,
+html.light-theme .storybook-theme-root {
+  background-color: var(--color-surface-0);
+}
+
+html.dark-theme,
+html.dark-theme body,
+html.dark-theme #storybook-root,
+html.dark-theme #storybook-docs,
+html.dark-theme .docs-story,
+html.dark-theme .sb-story,
+html.dark-theme .storybook-theme-root {
+  background-color: var(--color-surface-0);
+}
+
+html.system-theme,
+html.system-theme body,
+html.system-theme #storybook-root,
+html.system-theme #storybook-docs,
+html.system-theme .docs-story,
+html.system-theme .sb-story,
+html.system-theme .storybook-theme-root {
+  background-color: var(--color-surface-0);
+}
